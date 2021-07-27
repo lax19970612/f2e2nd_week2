@@ -5,60 +5,166 @@
   background-repeat: no-repeat;
 }
 
-.card:not(:first-child) { margin-top: -141px; }
+.card:not(:first-child) {
+  margin-top: -141px;
+}
 
-.card-club-1 { background-image: url('../assets/img/card/card-club-1.svg'); }
-.card-club-2 { background-image: url('../assets/img/card/card-club-2.svg'); }
-.card-club-3 { background-image: url('../assets/img/card/card-club-3.svg'); }
-.card-club-4 { background-image: url('../assets/img/card/card-club-4.svg'); }
-.card-club-5 { background-image: url('../assets/img/card/card-club-5.svg'); }
-.card-club-6 { background-image: url('../assets/img/card/card-club-6.svg'); }
-.card-club-7 { background-image: url('../assets/img/card/card-club-7.svg'); }
-.card-club-8 { background-image: url('../assets/img/card/card-club-8.svg'); }
-.card-club-9 { background-image: url('../assets/img/card/card-club-9.svg'); }
-.card-club-10 { background-image: url('../assets/img/card/card-club-10.svg'); }
-.card-club-11 { background-image: url('../assets/img/card/card-club-11.svg'); }
-.card-club-12 { background-image: url('../assets/img/card/card-club-12.svg'); }
-.card-club-13 { background-image: url('../assets/img/card/card-club-13.svg'); }
+.card-club-1 {
+  background-image: url('../assets/img/card/card-club-1.svg');
+}
+.card-club-2 {
+  background-image: url('../assets/img/card/card-club-2.svg');
+}
+.card-club-3 {
+  background-image: url('../assets/img/card/card-club-3.svg');
+}
+.card-club-4 {
+  background-image: url('../assets/img/card/card-club-4.svg');
+}
+.card-club-5 {
+  background-image: url('../assets/img/card/card-club-5.svg');
+}
+.card-club-6 {
+  background-image: url('../assets/img/card/card-club-6.svg');
+}
+.card-club-7 {
+  background-image: url('../assets/img/card/card-club-7.svg');
+}
+.card-club-8 {
+  background-image: url('../assets/img/card/card-club-8.svg');
+}
+.card-club-9 {
+  background-image: url('../assets/img/card/card-club-9.svg');
+}
+.card-club-10 {
+  background-image: url('../assets/img/card/card-club-10.svg');
+}
+.card-club-11 {
+  background-image: url('../assets/img/card/card-club-11.svg');
+}
+.card-club-12 {
+  background-image: url('../assets/img/card/card-club-12.svg');
+}
+.card-club-13 {
+  background-image: url('../assets/img/card/card-club-13.svg');
+}
 
-.card-heart-1 { background-image: url('../assets/img/card/card-heart-1.svg'); }
-.card-heart-2 { background-image: url('../assets/img/card/card-heart-2.svg'); }
-.card-heart-3 { background-image: url('../assets/img/card/card-heart-3.svg'); }
-.card-heart-4 { background-image: url('../assets/img/card/card-heart-4.svg'); }
-.card-heart-5 { background-image: url('../assets/img/card/card-heart-5.svg'); }
-.card-heart-6 { background-image: url('../assets/img/card/card-heart-6.svg'); }
-.card-heart-7 { background-image: url('../assets/img/card/card-heart-7.svg'); }
-.card-heart-8 { background-image: url('../assets/img/card/card-heart-8.svg'); }
-.card-heart-9 { background-image: url('../assets/img/card/card-heart-9.svg'); }
-.card-heart-10 { background-image: url('../assets/img/card/card-heart-10.svg'); }
-.card-heart-11 { background-image: url('../assets/img/card/card-heart-11.svg'); }
-.card-heart-12 { background-image: url('../assets/img/card/card-heart-12.svg'); }
-.card-heart-13 { background-image: url('../assets/img/card/card-heart-13.svg'); }
+.card-heart-1 {
+  background-image: url('../assets/img/card/card-heart-1.svg');
+}
+.card-heart-2 {
+  background-image: url('../assets/img/card/card-heart-2.svg');
+}
+.card-heart-3 {
+  background-image: url('../assets/img/card/card-heart-3.svg');
+}
+.card-heart-4 {
+  background-image: url('../assets/img/card/card-heart-4.svg');
+}
+.card-heart-5 {
+  background-image: url('../assets/img/card/card-heart-5.svg');
+}
+.card-heart-6 {
+  background-image: url('../assets/img/card/card-heart-6.svg');
+}
+.card-heart-7 {
+  background-image: url('../assets/img/card/card-heart-7.svg');
+}
+.card-heart-8 {
+  background-image: url('../assets/img/card/card-heart-8.svg');
+}
+.card-heart-9 {
+  background-image: url('../assets/img/card/card-heart-9.svg');
+}
+.card-heart-10 {
+  background-image: url('../assets/img/card/card-heart-10.svg');
+}
+.card-heart-11 {
+  background-image: url('../assets/img/card/card-heart-11.svg');
+}
+.card-heart-12 {
+  background-image: url('../assets/img/card/card-heart-12.svg');
+}
+.card-heart-13 {
+  background-image: url('../assets/img/card/card-heart-13.svg');
+}
 
-.card-diamond-1 { background-image: url('../assets/img/card/card-diamond-1.svg'); }
-.card-diamond-2 { background-image: url('../assets/img/card/card-diamond-2.svg'); }
-.card-diamond-3 { background-image: url('../assets/img/card/card-diamond-3.svg'); }
-.card-diamond-4 { background-image: url('../assets/img/card/card-diamond-4.svg'); }
-.card-diamond-5 { background-image: url('../assets/img/card/card-diamond-5.svg'); }
-.card-diamond-6 { background-image: url('../assets/img/card/card-diamond-6.svg'); }
-.card-diamond-7 { background-image: url('../assets/img/card/card-diamond-7.svg'); }
-.card-diamond-8 { background-image: url('../assets/img/card/card-diamond-8.svg'); }
-.card-diamond-9 { background-image: url('../assets/img/card/card-diamond-9.svg'); }
-.card-diamond-10 { background-image: url('../assets/img/card/card-diamond-10.svg'); }
-.card-diamond-11 { background-image: url('../assets/img/card/card-diamond-11.svg'); }
-.card-diamond-12 { background-image: url('../assets/img/card/card-diamond-12.svg'); }
-.card-diamond-13 { background-image: url('../assets/img/card/card-diamond-13.svg'); }
+.card-diamond-1 {
+  background-image: url('../assets/img/card/card-diamond-1.svg');
+}
+.card-diamond-2 {
+  background-image: url('../assets/img/card/card-diamond-2.svg');
+}
+.card-diamond-3 {
+  background-image: url('../assets/img/card/card-diamond-3.svg');
+}
+.card-diamond-4 {
+  background-image: url('../assets/img/card/card-diamond-4.svg');
+}
+.card-diamond-5 {
+  background-image: url('../assets/img/card/card-diamond-5.svg');
+}
+.card-diamond-6 {
+  background-image: url('../assets/img/card/card-diamond-6.svg');
+}
+.card-diamond-7 {
+  background-image: url('../assets/img/card/card-diamond-7.svg');
+}
+.card-diamond-8 {
+  background-image: url('../assets/img/card/card-diamond-8.svg');
+}
+.card-diamond-9 {
+  background-image: url('../assets/img/card/card-diamond-9.svg');
+}
+.card-diamond-10 {
+  background-image: url('../assets/img/card/card-diamond-10.svg');
+}
+.card-diamond-11 {
+  background-image: url('../assets/img/card/card-diamond-11.svg');
+}
+.card-diamond-12 {
+  background-image: url('../assets/img/card/card-diamond-12.svg');
+}
+.card-diamond-13 {
+  background-image: url('../assets/img/card/card-diamond-13.svg');
+}
 
-.card-spade-1 { background-image: url('../assets/img/card/card-spade-1.svg'); }
-.card-spade-2 { background-image: url('../assets/img/card/card-spade-2.svg'); }
-.card-spade-3 { background-image: url('../assets/img/card/card-spade-3.svg'); }
-.card-spade-4 { background-image: url('../assets/img/card/card-spade-4.svg'); }
-.card-spade-5 { background-image: url('../assets/img/card/card-spade-5.svg'); }
-.card-spade-6 { background-image: url('../assets/img/card/card-spade-6.svg'); }
-.card-spade-7 { background-image: url('../assets/img/card/card-spade-7.svg'); }
-.card-spade-8 { background-image: url('../assets/img/card/card-spade-8.svg'); }
-.card-spade-9 { background-image: url('../assets/img/card/card-spade-9.svg'); }
-.card-spade-10 { background-image: url('../assets/img/card/card-spade-10.svg'); }
-.card-spade-11 { background-image: url('../assets/img/card/card-spade-11.svg'); }
-.card-spade-12 { background-image: url('../assets/img/card/card-spade-12.svg'); }
-.card-spade-13 { background-image: url('../assets/img/card/card-spade-13.svg'); }
+.card-spade-1 {
+  background-image: url('../assets/img/card/card-spade-1.svg');
+}
+.card-spade-2 {
+  background-image: url('../assets/img/card/card-spade-2.svg');
+}
+.card-spade-3 {
+  background-image: url('../assets/img/card/card-spade-3.svg');
+}
+.card-spade-4 {
+  background-image: url('../assets/img/card/card-spade-4.svg');
+}
+.card-spade-5 {
+  background-image: url('../assets/img/card/card-spade-5.svg');
+}
+.card-spade-6 {
+  background-image: url('../assets/img/card/card-spade-6.svg');
+}
+.card-spade-7 {
+  background-image: url('../assets/img/card/card-spade-7.svg');
+}
+.card-spade-8 {
+  background-image: url('../assets/img/card/card-spade-8.svg');
+}
+.card-spade-9 {
+  background-image: url('../assets/img/card/card-spade-9.svg');
+}
+.card-spade-10 {
+  background-image: url('../assets/img/card/card-spade-10.svg');
+}
+.card-spade-11 {
+  background-image: url('../assets/img/card/card-spade-11.svg');
+}
+.card-spade-12 {
+  background-image: url('../assets/img/card/card-spade-12.svg');
+}
+.card-spade-13 {
+  background-image: url('../assets/img/card/card-spade-13.svg');
+}
