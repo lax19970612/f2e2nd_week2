@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-group {
+  display: flex;
+  width: 112px;
+  flex-direction: column;
+}
