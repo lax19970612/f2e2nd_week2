@@ -38,8 +38,15 @@ const Game: React.FC = () => {
 
   return (
     <div className="main">
-      {cardList.map((row: number[], index: number) => {
-        return <CardGroup key={index} cards={row} />;
+      {cardList.map((cards: number[], row: number) => {
+        return (
+          <CardGroup
+            key={row}
+            row={row}
+            cards={cards}
+            dropEvent={setCardList}
+          />
+        );
       })}
     </div>
   );

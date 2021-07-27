@@ -9,6 +9,16 @@
   margin-top: -141px;
 }
 
+[draggable='true'] {
+  /*
+   To prevent user selecting inside the drag source
+  */
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 .card-club-1 {
   background-image: url('../assets/img/card/card-club-1.svg');
 }
