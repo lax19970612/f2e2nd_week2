@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css';
 
-const type = ['club', 'heart', 'diamond', 'spade'];
+const type = ['spade', 'heart', 'diamond', 'club'];
 
 const Card: React.FC<{ row: number; value: number }> = ({ row, value }) => {
   const cardType = type[Math.floor(value / 13)];

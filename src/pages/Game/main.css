@@ -1,10 +1,82 @@
 .main {
   display: flex;
-  justify-content: space-evenly;
+  margin-top: 56px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.stacking-area {
+  display: flex;
+  margin-top: 48px;
+}
+
+.open-cells-wrapper,
+.foundation-wrapper {
+  display: flex;
+  margin: 0 15px;
+  width: 50%;
+}
+
+.open-cells-wrapper {
+  justify-content: flex-end;
+}
+
+[class*='foundation-box-'] {
+  position: relative;
+}
+
+[class*='foundation-box-']::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+}
+
+.foundation-box-spade::before {
+  background: transparent
+    url('../../assets/img/foundation/spade-16px-white.svg') 50% 50% no-repeat
+    padding-box;
+}
+
+.foundation-box-heart::before {
+  background: transparent
+    url('../../assets/img/foundation/heart-16px-white.svg') 50% 50% no-repeat
+    padding-box;
+}
+
+.foundation-box-diamond::before {
+  background: transparent
+    url('../../assets/img/foundation/diamond-16px-white.svg') 50% 50% no-repeat
+    padding-box;
+}
+
+.foundation-box-club::before {
+  background: transparent url('../../assets/img/foundation/club-16px-white.svg')
+    50% 50% no-repeat padding-box;
+}
+
+.cell-wrapper {
+  min-width: 112px;
+  height: 173px;
+  display: flex;
+  background-color: #ffffff14;
+  border-radius: 4px;
+}
+
+.cell-wrapper:not(:first-child) {
+  margin-left: 30px;
 }
 
 .card-group {
   display: flex;
   width: 112px;
   flex-direction: column;
+}
+
+.card-group:not(:first-child) {
+  margin-left: 30px;
 }

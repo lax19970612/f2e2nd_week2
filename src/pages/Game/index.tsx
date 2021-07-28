@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import HeaderBar from '../../components/HeaderBar';
+import OpenCells from './components/OpenCells';
+import Foundation from './components/Foundation';
 import CardGroup from './components/CardGroup';
 import './main.css';
 
@@ -37,18 +40,25 @@ const Game: React.FC = () => {
   }, []);
 
   return (
-    <div className="main">
-      {cardList.map((cards: number[], row: number) => {
-        return (
-          <CardGroup
-            key={row}
-            row={row}
-            cards={cards}
-            dropEvent={setCardList}
-          />
-        );
-      })}
-    </div>
+    <>
+      <HeaderBar />
+      <div className="stacking-area">
+        <OpenCells />
+        <Foundation />
+      </div>
+      <div className="main">
+        {cardList.map((cards: number[], row: number) => {
+          return (
+            <CardGroup
+              key={row}
+              row={row}
+              cards={cards}
+              dropEvent={setCardList}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 };
 
