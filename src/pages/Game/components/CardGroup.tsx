@@ -1,21 +1,31 @@
 import Card from '../../../components/Card';
+import GameDataInterface from '../../../interface/GameData';
+import GameUtils from '../../../assets/utils/GameUtils';
 
 const CardGroup: React.FC<{
   row: number;
+  type: string;
   cards: number[];
   dropEvent: Function;
-}> = ({ row, cards, dropEvent }) => {
+}> = ({ row, type, cards, dropEvent }) => {
   const onDrop = (e: React.DragEvent<HTMLDivElement>) => {
     cancelDefault(e);
     const data = JSON.parse(e.dataTransfer.getData('data'));
-    const [moveCardPreRow, moveCardValue] = [data.row, data.value];
+    const [moveCardFrom, moveCardPreRow, moveCardValue] = [
+      data.from,
+      data.row,
+      data.value
+    ];
 
-    dropEvent((prevData: number[][]) => {
-      let copy: number[][] = [...prevData];
-      copy[moveCardPreRow] = copy[moveCardPreRow].filter(
+    dropEvent((prevData: GameDataInterface) => {
+      let copy: GameDataInterface = JSON.parse(JSON.stringify(prevData));
+      let datafrom: number[][] = GameUtils.GetListData(copy, moveCardFrom);
+      let dataTarget: number[][] = GameUtils.GetListData(copy, type);
+
+      datafrom[moveCardPreRow] = datafrom[moveCardPreRow].filter(
         (cardValue: number) => cardValue !== moveCardValue
       );
-      copy[row] = [...copy[row], moveCardValue];
+      dataTarget[row] = [...dataTarget[row], moveCardValue];
       return copy;
     });
   };
@@ -33,7 +43,7 @@ const CardGroup: React.FC<{
       onDragOver={cancelDefault}
     >
       {cards.map((card: number) => {
-        return <Card key={card} row={row} value={card} />;
+        return <Card key={card} from={type} row={row} value={card} />;
       })}
     </div>
   );

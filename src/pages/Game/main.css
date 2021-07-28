@@ -21,6 +21,10 @@
   justify-content: flex-end;
 }
 
+.cell-wrapper > .card-group > .card:not(:first-child) {
+  margin-top: -173px !important;
+}
+
 [class*='foundation-box-'] {
   position: relative;
 }

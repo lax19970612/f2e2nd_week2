@@ -1,12 +1,24 @@
-import Card from '../../../components/Card';
+import React from 'react';
+import CardGroup from './CardGroup';
 
-const OpenCells = () => {
+const OpenCells: React.FC<{ cards: number[][]; dropEvent: Function }> = ({
+  cards,
+  dropEvent
+}) => {
   return (
     <div className="open-cells-wrapper">
-      <div className="cell-wrapper"></div>
-      <div className="cell-wrapper"></div>
-      <div className="cell-wrapper"></div>
-      <div className="cell-wrapper"></div>
+      {cards.map((cardGroup: number[], index: number) => {
+        return (
+          <div key={`open-cell-row-${index}`} className="cell-wrapper">
+            <CardGroup
+              type={'opencell'}
+              row={index}
+              cards={cardGroup}
+              dropEvent={dropEvent}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 };

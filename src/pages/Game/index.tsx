@@ -3,58 +3,45 @@ import HeaderBar from '../../components/HeaderBar';
 import OpenCells from './components/OpenCells';
 import Foundation from './components/Foundation';
 import CardGroup from './components/CardGroup';
+
+import GameUtils from '../../assets/utils/GameUtils';
 import './main.css';
 
-const CARD_LENGTH: number = 52;
-const ROW_NUMBER: number = 8;
-const isUsed: boolean[] = new Array(CARD_LENGTH).fill(false);
-
-const getRandCardNum: Function = () => {
-  let value: number;
-  while (true) {
-    value = Math.floor(Math.random() * CARD_LENGTH); // 0 - 51
-    if (!isUsed[value]) {
-      isUsed[value] = true;
-      return value;
-    }
-  }
-};
-
-const getRandomCardList: Function = (): number[][] => {
-  let list: number[][] = new Array(ROW_NUMBER).fill([])
-  for (let i = 0; i < CARD_LENGTH; ++i) {
-    let row: number = i % ROW_NUMBER;
-    let cardValue: number = getRandCardNum();
-    list[row] = [...list[row], cardValue];
-  }
-
-  return list;
-}
+import GameDataInterface from '../../interface/GameData';
 
 const Game: React.FC = () => {
-  const [cardList, setCardList] = useState<number[][]>(new Array(ROW_NUMBER).fill([]));
+  const [gameData, setGameData] = useState<GameDataInterface>({
+    foundation: new Array(GameUtils.FOUNDATION_LENGTH).fill([]),
+    mainCardList: new Array(GameUtils.ROW_NUMBER).fill([]),
+    openCellList: new Array(GameUtils.OPEN_CELL_LENGTH).fill([])
+  });
 
   // initialize cardList
   useEffect(() => {
-    const randomCardList: number[][] = getRandomCardList()
-    setCardList(randomCardList);
+    const randomCardList: number[][] = GameUtils.GetRandomCardList();
+    setGameData({
+      foundation: new Array(GameUtils.FOUNDATION_LENGTH).fill([]),
+      mainCardList: randomCardList,
+      openCellList: new Array(GameUtils.OPEN_CELL_LENGTH).fill([])
+    });
   }, []);
 
   return (
     <>
       <HeaderBar />
       <div className="stacking-area">
-        <OpenCells />
-        <Foundation />
+        <OpenCells cards={gameData.openCellList} dropEvent={setGameData} />
+        <Foundation cards={gameData.foundation} dropEvent={setGameData} />
       </div>
       <div className="main">
-        {cardList.map((cards: number[], row: number) => {
+        {gameData.mainCardList.map((cards: number[], row: number) => {
           return (
             <CardGroup
               key={row}
+              type={'main'}
               row={row}
               cards={cards}
-              dropEvent={setCardList}
+              dropEvent={setGameData}
             />
           );
         })}

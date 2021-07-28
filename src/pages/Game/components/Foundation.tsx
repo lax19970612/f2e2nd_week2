@@ -1,12 +1,29 @@
-import Card from '../../../components/Card';
+import React from 'react';
+import CardGroup from './CardGroup';
 
-const Foundation = () => {
+const cardTypeList: string[] = ['spade', 'heart', 'diamond', 'club'];
+
+const Foundation: React.FC<{ cards: number[][]; dropEvent: Function }> = ({
+  cards,
+  dropEvent
+}) => {
   return (
     <div className="foundation-wrapper">
-      <div className="cell-wrapper foundation-box-spade"></div>
-      <div className="cell-wrapper foundation-box-heart"></div>
-      <div className="cell-wrapper foundation-box-diamond"></div>
-      <div className="cell-wrapper foundation-box-club"></div>
+      {cards.map((cardGroup: number[], index: number) => {
+        return (
+          <div
+            className={`cell-wrapper foundation-box-${cardTypeList[index]}`}
+            key={`Foundation-row-${index}`}
+          >
+            <CardGroup
+              type={'foundation'}
+              row={index}
+              cards={cardGroup}
+              dropEvent={dropEvent}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 };
