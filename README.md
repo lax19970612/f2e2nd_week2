@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# f2e2nd_week2
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## design draft
+
+The layout is designed by [吳俊儀 Junior](https://www.behance.net/juniwu), shows on
+[link](https://xd.adobe.com/spec/f01f6d09-be4f-4bf3-601d-7c817fe225ab-862e/grid) by Adobe XD.
 
 ## Available Scripts
 
@@ -13,11 +18,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
@@ -38,6 +38,11 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+### `yarn deploy`
+
+The project will build and publish to `gh-pages` branch automatically.\
+Open [https://laxative.github.io/f2e2nd_week2/](https://laxative.github.io/f2e2nd_week2/) to view it.
 
 ## Learn More
 
