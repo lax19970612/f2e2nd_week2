@@ -22,10 +22,12 @@ const CardGroup: React.FC<{
       let datafrom: number[][] = GameUtils.GetListData(copy, moveCardFrom);
       let dataTarget: number[][] = GameUtils.GetListData(copy, type);
 
-      datafrom[moveCardPreRow] = datafrom[moveCardPreRow].filter(
-        (cardValue: number) => cardValue !== moveCardValue
+      let cardIndex: number = datafrom[moveCardPreRow].findIndex(
+        (value) => value === moveCardValue
       );
-      dataTarget[row] = [...dataTarget[row], moveCardValue];
+      let moveCardList: number[] = datafrom[moveCardPreRow].splice(cardIndex);
+
+      dataTarget[row] = [...dataTarget[row], ...moveCardList];
       return copy;
     });
   };
