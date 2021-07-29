@@ -19,7 +19,12 @@ const HeaderBar: React.FC<{
       <div className="timer">{passTime}</div>
       <div className="game-handle">
         <ul className="game-handle-list">
-          <li className="game-handle-list-item handle-undo">UNDO</li>
+          <li
+            className="game-handle-list-item handle-undo"
+            onClick={() => alert('哈哈哈還想反悔阿')}
+          >
+            UNDO
+          </li>
           <li
             className="game-handle-list-item handle-pause"
             onClick={() => toggleTimer()}
