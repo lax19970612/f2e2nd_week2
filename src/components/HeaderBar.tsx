@@ -1,7 +1,7 @@
 import React from 'react';
 import './HeaderBar.css';
 
-const HeaderBar: React.FC = () => {
+const HeaderBar: React.FC<{ restart: Function }> = ({ restart }) => {
   return (
     <div className="header-bar">
       <div className="logo">
@@ -13,7 +13,12 @@ const HeaderBar: React.FC = () => {
         <ul className="game-handle-list">
           <li className="game-handle-list-item handle-undo">UNDO</li>
           <li className="game-handle-list-item handle-pause">PAUSE</li>
-          <li className="game-handle-list-item handle-restart">RESTART</li>
+          <li
+            className="game-handle-list-item handle-restart"
+            onClick={() => restart()}
+          >
+            RESTART
+          </li>
         </ul>
       </div>
     </div>

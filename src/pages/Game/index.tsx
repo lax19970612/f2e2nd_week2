@@ -15,20 +15,27 @@ const Game: React.FC = () => {
     mainCardList: new Array(GameUtils.ROW_NUMBER).fill([]),
     openCellList: new Array(GameUtils.OPEN_CELL_LENGTH).fill([])
   });
+  const [initialGameData, setInitialGameData] = useState<GameDataInterface>({
+    foundation: new Array(GameUtils.FOUNDATION_LENGTH).fill([]),
+    mainCardList: new Array(GameUtils.ROW_NUMBER).fill([]),
+    openCellList: new Array(GameUtils.OPEN_CELL_LENGTH).fill([])
+  });
 
   // initialize cardList
   useEffect(() => {
     const randomCardList: number[][] = GameUtils.GetRandomCardList();
-    setGameData({
+    let data = {
       foundation: new Array(GameUtils.FOUNDATION_LENGTH).fill([]),
       mainCardList: randomCardList,
       openCellList: new Array(GameUtils.OPEN_CELL_LENGTH).fill([])
-    });
+    };
+    setGameData(data);
+    setInitialGameData(data);
   }, []);
 
   return (
     <>
-      <HeaderBar />
+      <HeaderBar restart={() => setGameData(initialGameData)} />
       <div className="stacking-area">
         <OpenCells cards={gameData.openCellList} dropEvent={setGameData} />
         <Foundation cards={gameData.foundation} dropEvent={setGameData} />
