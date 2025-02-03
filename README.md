@@ -42,7 +42,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ### `yarn deploy`
 
 The project will build and publish to `gh-pages` branch automatically.\
-Open [https://laxative.github.io/f2e2nd_week2/](https://laxative.github.io/f2e2nd_week2/) to view it.
+Open [https://laxative.github.io/f2e2nd_week2/](https://lax19970612.github.io/f2e2nd_week2/) to view it.
 
 ## Learn More
 
